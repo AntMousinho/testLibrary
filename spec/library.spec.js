@@ -24,4 +24,3 @@ console.log(`6. expect toBeTruthy, not truthy value`);
 result = test.expect('').toBeTruthy();
 console.log(test.assertEquals(result, `Fail - Expected value to be truthy`))
 
-

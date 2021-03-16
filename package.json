@@ -1,0 +1,22 @@
+{
+  "name": "testlibrary",
+  "version": "1.0.0",
+  "description": "Antony Mousinho's self built test library",
+  "main": "library.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AntMousinho/testLibrary.git"
+  },
+  "author": "Antony Mousinho <antony.mousinho@hotmail.co.uk>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AntMousinho/testLibrary/issues"
+  },
+  "homepage": "https://github.com/AntMousinho/testLibrary#readme",
+  "dependencies": {
+    "chalk": "^4.1.0"
+  }
+}

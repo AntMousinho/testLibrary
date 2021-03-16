@@ -1,3 +1,5 @@
+const chalk = require('./chalk_format');
+
 class Matchers {
     constructor(actualOutput) {
         this._actualOutput = actualOutput;
@@ -5,7 +7,7 @@ class Matchers {
 
     toEqual(expectedOutput) {
         if(this._actualOutput === expectedOutput) {
-            return  `Succeeded`
+            console.log (chalk.success(`        ✅ Succeeded`));
         } else {
             throw new Error(`Fail - Actual: ${this._actualOutput}, Expected: ${expectedOutput}`);
         }
@@ -13,12 +15,12 @@ class Matchers {
 
     toBeTruthy() {
         if(this._actualOutput) {
-            return `Succeeded`
+            console.log (chalk.success(`    ✅ Succeeded`));
         } else {
-            console.log(`Fail - Expected value to be truthy`);
             throw new Error(`Fail - Expected value to be truthy`)
         }
     }
 }
+
 
 module.exports = Matchers;
