@@ -1,0 +1,1 @@
+require('./spec/library.spec');
