@@ -25,28 +25,6 @@ const expect = (actualOutput) => {
 
 const assertEquals = (sum1, sum2) => sum1 === sum2;
 
-
-describe('a suite', () => {
-    it('a test that will fail', () => {
-        expect(true).toEqual(false);
-    })
-
-    it('a test that will never run', () => {
-        expect(1).toEqual(1);
-    })
-})
-
-describe('another suite', () => {
-    it(`should succeed, true === true`, () => {
-        expect(true).toEqual(true);
-    })
-
-    it(`should succeed, 1 === 1`, () => {
-        expect(1).toEqual(1);
-    })
-})
-
-
 module.exports = {
     describe,
     expect, 
