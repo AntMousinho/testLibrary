@@ -3,7 +3,7 @@ const Matchers = require('./matchers')
 
 const describe = (suiteName, fn) => {
     try {
-        console.log("\n" + chalk.suite(suiteName));
+        console.log("\n\n" + chalk.suite(suiteName));
         fn();
     } catch (err) {
         console.log(chalk.error(`[${err.message.toUpperCase()}]`));
@@ -11,11 +11,11 @@ const describe = (suiteName, fn) => {
 }
 
 const it = (testName, fn) => {
-    console.log(`   test: ${chalk.test(testName)}`);
+    console.log(`   Test: ${chalk.test(testName)}`);
     try {
         fn();
     } catch(err) {
-        console.log(`        ❌ ${chalk.error(err)}`);
+        console.log(`        ❌ ${chalk.error(err.stack)}`);
     }
 }
 

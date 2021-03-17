@@ -7,7 +7,8 @@ class Matchers {
 
     toEqual(expectedOutput) {
         if(this._actualOutput === expectedOutput) {
-            console.log (chalk.success(`        ✅ Succeeded`));
+            console.log(chalk.success(`        ✅ Succeeded`));
+            return chalk.success(`        ✅ Succeeded`);
         } else {
             throw new Error(`Fail - Actual: ${this._actualOutput}, Expected: ${expectedOutput}`);
         }
@@ -15,7 +16,8 @@ class Matchers {
 
     toBeTruthy() {
         if(this._actualOutput) {
-            console.log (chalk.success(`    ✅ Succeeded`));
+            console.log(chalk.success(`        ✅ Succeeded`));
+            return chalk.success(`        ✅ Succeeded`);
         } else {
             throw new Error(`Fail - Expected value to be truthy`)
         }
